@@ -1,10 +1,9 @@
-
 /*S*M*BQ,
-где
-S – знак числа (мантиссы);
-M – мантисса числа;
-B – основание системы счисления, у нас 10;
-Q – порядок числа.*/
+РіРґРµ
+S вЂ“ Р·РЅР°Рє С‡РёСЃР»Р° (РјР°РЅС‚РёСЃСЃС‹);
+M вЂ“ РјР°РЅС‚РёСЃСЃР° С‡РёСЃР»Р°;
+B вЂ“ РѕСЃРЅРѕРІР°РЅРёРµ СЃРёСЃС‚РµРјС‹ СЃС‡РёСЃР»РµРЅРёСЏ, Сѓ РЅР°СЃ 10;
+Q вЂ“ РїРѕСЂСЏРґРѕРє С‡РёСЃР»Р°.*/
 public class RoundError {
 	
 	   public static void main(String[] args) {
@@ -17,22 +16,22 @@ public class RoundError {
 			
 			if (x1>x2) {xx = mantissa2 * Math.pow(10,-exp1+exp2);
 			sum = xx+mantissa1;
-			System.out.println ("точное значение: " + sum* Math.pow(10,exp1));
+			System.out.println ("С‚РѕС‡РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " + sum* Math.pow(10,exp1));
 			}
 			else { xx=mantissa1 * Math.pow(10,-exp2+exp1);
 			sum = xx+ mantissa2;
-			System.out.println ("точное значение: " + sum* Math.pow(10,exp2));
+			System.out.println ("С‚РѕС‡РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " + sum* Math.pow(10,exp2));
 			}
 			
 			roundResult1 = (double)Math.round(sum* Math.pow(10,exp1) * 10d) / 10d;
-			System.out.println("округленное значение 1 : " + roundResult1);
-			System.out.println("aбсолютная  ошибка 1 : " + (sum* Math.pow(10,exp1)  - roundResult1));
-			System.out.println("относительная ошибка 1 : " + ( (sum* Math.pow(10,exp1)  - roundResult1)/roundResult1));
+			System.out.println("РѕРєСЂСѓРіР»РµРЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ 1 : " + roundResult1);
+			System.out.println("aР±СЃРѕР»СЋС‚РЅР°СЏ  РѕС€РёР±РєР° 1 : " + (sum* Math.pow(10,exp1)  - roundResult1));
+			System.out.println("РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅР°СЏ РѕС€РёР±РєР° 1 : " + ( (sum* Math.pow(10,exp1)  - roundResult1)/roundResult1));
 			
 			roundResult2 = (double)Math.floor(sum* Math.pow(10,exp1) * 10d) / 10d;
-			System.out.println("округленное значение 1 : " + roundResult2);
-			System.out.println("aбсолютная  ошибка 2 : " + (sum* Math.pow(10,exp1)  - roundResult2));
-			System.out.println("относительная ошибка 2 : " + ( (sum* Math.pow(10,exp1)  - roundResult2)/roundResult2));
+			System.out.println("РѕРєСЂСѓРіР»РµРЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ 1 : " + roundResult2);
+			System.out.println("aР±СЃРѕР»СЋС‚РЅР°СЏ  РѕС€РёР±РєР° 2 : " + (sum* Math.pow(10,exp1)  - roundResult2));
+			System.out.println("РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅР°СЏ РѕС€РёР±РєР° 2 : " + ( (sum* Math.pow(10,exp1)  - roundResult2)/roundResult2));
 			
 	}
 
